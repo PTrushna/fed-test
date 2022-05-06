@@ -4,13 +4,13 @@ var reportsWidget = {
         template: (
             '{{#.}}' +
                 '<article class="reports_item">' +
-                    '<a href="{{cover}}" target="_blank">' +
-                        '<img class="reports_cover" src="{{cover}}" alt="{{title}} Cover"/>'
+                    '<a class="reports_cover_wrapper" href="{{cover}}" target="_blank">' +
+                        '<img class="reports_cover" src="{{cover}}" alt="{{title}} Cover"/>' +
                     '</a>' +
                     '<footer class="reports_docs">' +
                         '{{#documents}}' +
                             '<h3 class="reports_title">' +
-                                '<a href="{{url}}" target="_blank">{{title}}</a>' +
+                                '<a href="{{url}}" target="_blank">{{title}}</a> <span>({{file_size}} {{file_type}})</span>' +
                             '</h3>' +
                         '{{/documents}}' +
                     '</footer>' +
@@ -23,11 +23,11 @@ var reportsWidget = {
         this.renderReports(reportData || []);
     },
 
-    renderReports: function(reports) {
+    renderReports: function(reportsWidget) {
         var inst = this,
             options = inst.options;
 
-        $(options.containerSelector).html(Mustache.render(options.template, reports));
+        $(options.containerSelector).html(Mustache.render(options.template, reportsWidget));
     }
 };
 
