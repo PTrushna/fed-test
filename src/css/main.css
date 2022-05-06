@@ -59,6 +59,131 @@
 }
 
 /* Begin styling the report items here! */
+/*
+  Written By: Trushna Patel
+  Date modified: 5/6/2022
+*/
+body {
+    background-color: #2b3034;
+    color: #ffffff;
+}
+.layout_header {
+    background-color: #23272a;
+    padding: 1.5vw 0;
+    text-align: center;
+    font-size: 2vw;
+    margin-bottom: 1em;
+}
+.layout_title {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
 .reports {
-
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.reports_item {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.reports_cover_wrapper {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.reports_cover_wrapper img {
+    display: block;
+    margin: 0 auto 1em;
+    width: 80%;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, -50px -50px 5px -30px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, -50px -50px 5px -30px rgba(0,0,0,0);
+}
+.reports_docs {
+    background-color: #23272a;
+    padding: 1vw 2vw;
+    border-radius: 6px;
+    margin-bottom: 2em;
+}
+.reports_title {
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .72vw;
+    margin: 0 0 .2em;
+}
+.reports_title a {
+    text-decoration: none;
+    color: #fff;
+}
+.reports_title span {
+    color: grey;
+}
+@media only screen and (max-width: 1670px) {
+    .reports_title {
+        font-size: .8vw;
+    }
+}
+@media only screen and (max-width: 1380px) {
+    .reports_title {
+        font-size: .9vw;
+    }
+}
+@media only screen and (max-width: 1180px) {
+    .reports_title {
+        font-size: .75em;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .layout_inner {
+        max-width: 800px;
+    }
+    .reports_title {
+        font-size: .65em;
+    }
+}
+@media only screen and (max-width: 940px) {
+    .reports_item {
+        flex-basis: 50%;
+    }
+    .reports_docs {
+        margin: 0 1em 2em;
+        padding: 1em;
+    }
+    .reports_title {
+        font-size: 1.6vw;
+    }
+    .layout_header {
+        font-size: 2.5vw;
+        padding: 1.5em 0;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .reports_title {
+        font-size: 1.9vw;
+    }
+    .reports_cover_wrapper img {
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 568px) {
+    .reports_title {
+        font-size: 1.7vw;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .reports_item {
+        width: 100%;
+        flex-basis: 100%;
+    }
+    .reports_cover_wrapper img {
+        width: 100%;
+    }
+    .layout_header {
+        font-size: 4.5vw;
+    }
+    .reports_title {
+        font-size: 3.6vw;
+    }
 }
